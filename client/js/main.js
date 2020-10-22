@@ -1,18 +1,17 @@
 $(document).ready(function(){
     $('.tooltips-general').tooltip('hide');
     $('.mobile-menu-button').on('click', function(){
-        let mobileMenu=$('.navbar-lateral');	
+        var mobileMenu=$('.navbar-lateral');	
         if(mobileMenu.css('display')=='none'){
             mobileMenu.fadeIn(300);
         }else{
             mobileMenu.fadeOut(300);
         }
     });
-	
     $('.desktop-menu-button').on('click', function(e){
         e.preventDefault();
-        let NavLateral=$('.navbar-lateral'); 
-        let ContentPage=$('.content-page-container');   
+        var NavLateral=$('.navbar-lateral'); 
+        var ContentPage=$('.content-page-container');   
         if(NavLateral.hasClass('desktopMenu')){
             NavLateral.removeClass('desktopMenu');
             ContentPage.removeClass('desktopMenu');
@@ -23,7 +22,7 @@ $(document).ready(function(){
     });
     $('.dropdown-menu-button').on('click', function(e){
         e.preventDefault();
-        let icon=$(this).children('.icon-sub-menu');
+        var icon=$(this).children('.icon-sub-menu');
         if(icon.hasClass('zmdi-chevron-down')){
             icon.removeClass('zmdi-chevron-down').addClass('zmdi-chevron-up');
             $(this).addClass('dropdown-menu-button-active');
@@ -32,12 +31,12 @@ $(document).ready(function(){
             $(this).removeClass('dropdown-menu-button-active');
         }
         
-        let dropMenu=$(this).next('ul');
+        var dropMenu=$(this).next('ul');
         dropMenu.slideToggle('slow');
     });
     $('.exit-system-button').on('click', function(e){
         e.preventDefault();
-        let LinkExitSystem=$(this).attr("data-href");
+        var LinkExitSystem=$(this).attr("data-href");
         swal({
             title: "¿Estás seguro?",
             text: "Quieres salir del sistema y cerrar la sesión actual",
@@ -52,7 +51,30 @@ $(document).ready(function(){
             window.location=LinkExitSystem; 
         });  
     });
-    
+    $('.search-book-button').click(function(e){
+        e.preventDefault();
+        var LinkSearchBook=$(this).attr("data-href");
+        swal({
+           title: "¿Qué libro estás buscando?",
+           text: "Por favor escribe el nombre del libro",
+           type: "input",   
+           showCancelButton: true,
+           closeOnConfirm: false,
+           animation: "slide-from-top",
+           cancelButtonText: "Cancelar",
+           confirmButtonText: "Buscar",
+           confirmButtonColor: "#3598D9",
+           inputPlaceholder: "Escribe aquí el nombre de libro" }, 
+      function(inputValue){
+           if (inputValue === false) return false;  
+
+           if (inputValue === "") {
+               swal.showInputError("Debes escribir el nombre del libro");     
+               return false;   
+           } 
+            window.location=LinkSearchBook+"?bookName="+inputValue;
+       });
+    });
     $('.btn-help').on('click', function(){
         $('#ModalHelp').modal({
             show: true,
