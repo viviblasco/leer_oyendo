@@ -9,9 +9,9 @@
 }
 
 :root {
-    --first-color: #33414E;
-    --second-color: #2B3D51;
-    --option-nav: rgba(204, 122, 0, .5);
+    --first-color: #FAC41D;
+    --second-color: #FAC41D;
+    --option-nav: #FE9A2E ;
     --option-infoBar: #FFD559;
 }
 
@@ -303,7 +303,7 @@ select.material-control-login:hover {
 
 
 /*********==========Navs*/
-
+/******barra de arriba*/
 .navbar-user-top {
     background-color: var(--second-color);
     height: 55px;
@@ -322,7 +322,7 @@ select.material-control-login:hover {
 .navbar-user-top>ul>li {
     display: inline-block;
     float: right;
-    color: rgba(255, 255, 255, .4);
+    color: rgba(255, 255, 255, 5);
     height: 55px;
     margin: 0 12px;
     text-align: center;
@@ -335,7 +335,7 @@ select.material-control-login:hover {
 }
 
 .navbar-user-top>ul>li:hover span.badge {
-    background-color: #E34724;
+    background-color: rgba(255, 255, 255, 5);
 }
 
 .navbar-user-top>ul>li>i {
@@ -368,8 +368,8 @@ select.material-control-login:hover {
 }
 
 .container-menu-movile {
-    height: 100% !important;
-    background-color: rgba(43, 61, 81, .8);
+   height: 100% !important;
+    background-color: rgba(43, 61, 81, .8)
 }
 
 .logo {
@@ -730,7 +730,7 @@ input.material-control:focus~.highlight {
 }
 
 .tile-icon {
-    color: #B71C1C;
+    color: orange;
     border-bottom: 1px solid #E1E1E1;
     font-size: 50px;
 }
