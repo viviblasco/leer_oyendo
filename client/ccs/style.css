@@ -11,7 +11,7 @@
 :root {
     --first-color: #FAC41D;
     --second-color: #FAC41D;
-    --option-nav: #FE9A2E ;
+    --option-nav: rgba(204, 122, 0, .5);
     --option-infoBar: #FFD559;
 }
 
@@ -187,9 +187,9 @@ input.material-login-control:focus~.bar-login::after {
 }
 
 .btn-login {
-	background-color: transparent;
-	text-align: center;
-    border: rgba(2,2,2,1.00);
+    background-color: transparent;
+    text-align: center;
+    border: rgba(2, 2, 2, 1.00);
     box-shadow: none;
     font-size: 21px;
     line-height: 21px;
@@ -303,7 +303,10 @@ select.material-control-login:hover {
 
 
 /*********==========Navs*/
+
+
 /******barra de arriba*/
+
 .navbar-user-top {
     background-color: var(--second-color);
     height: 55px;
@@ -322,7 +325,7 @@ select.material-control-login:hover {
 .navbar-user-top>ul>li {
     display: inline-block;
     float: right;
-    color: rgba(255, 255, 255, 5);
+    color: rgba( 255, 255, 255, 5);
     height: 55px;
     margin: 0 12px;
     text-align: center;
@@ -368,7 +371,7 @@ select.material-control-login:hover {
 }
 
 .container-menu-movile {
-   height: 100% !important;
+    height: 100% !important;
     background-color: rgba(43, 61, 81, .8)
 }
 
@@ -405,14 +408,14 @@ select.material-control-login:hover {
     display: block;
     padding: 0;
     padding-left: 20px;
-    font-size: 14px;
+    font-size: 18px;
     text-decoration: none;
     color: #fff;
     transition: .3s all ease-in-out;
 }
 
 .nav-lateral-list-menu i {
-    font-size: 18px;
+    font-size: 25px;
     line-height: 45px;
 }
 
@@ -469,26 +472,6 @@ select.material-control-login:hover {
     color: #fff;
     padding-top: 20px;
     margin-top: 70px;
-}
-
-.footer-copyright {
-    height: 45px;
-    line-height: 45px;
-    color: #fff;
-    text-align: center;
-    font-size: 17px;
-    background-color: var(--second-color);
-}
-
-.footer-social {
-    cursor: pointer;
-    margin: 0 2px;
-    transition: all .3s ease-in-out;
-}
-
-.footer-social:hover {
-    color: #FFD054;
-    transform: scale(1.7);
 }
 
 
