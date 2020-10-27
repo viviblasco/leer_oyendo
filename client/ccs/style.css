@@ -187,7 +187,7 @@ input.material-login-control:focus~.bar-login::after {
 }
 
 .btn-login {
-    background-color: transparent;
+    background-color: orange;
     text-align: center;
     border: rgba(2, 2, 2, 1.00);
     box-shadow: none;
